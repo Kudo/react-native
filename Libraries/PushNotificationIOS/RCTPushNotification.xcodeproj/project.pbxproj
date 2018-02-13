@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		148699CF1ABD045300480536 /* RCTPushNotificationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 148699CE1ABD045300480536 /* RCTPushNotificationManager.m */; };
 		3D0574931DE6009C00184BB4 /* RCTPushNotificationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 148699CE1ABD045300480536 /* RCTPushNotificationManager.m */; };
+		8392E8472031AC1500172729 /* RCTPushNotificationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 148699CE1ABD045300480536 /* RCTPushNotificationManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -30,6 +31,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8392E8492031AC1500172729 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +47,7 @@
 		148699CD1ABD045300480536 /* RCTPushNotificationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = RCTPushNotificationManager.h; sourceTree = "<group>"; };
 		148699CE1ABD045300480536 /* RCTPushNotificationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCTPushNotificationManager.m; sourceTree = "<group>"; };
 		3D05745F1DE6004600184BB4 /* libRCTPushNotification-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libRCTPushNotification-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8392E84D2031AC1500172729 /* libRCTPushNotification-macOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libRCTPushNotification-macOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +59,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		58B511D81A9E6C8500147676 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8392E8482031AC1500172729 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -72,6 +90,7 @@
 				148699CE1ABD045300480536 /* RCTPushNotificationManager.m */,
 				134814211AA4EA7D00B7C361 /* Products */,
 				3D05745F1DE6004600184BB4 /* libRCTPushNotification-tvOS.a */,
+				8392E84D2031AC1500172729 /* libRCTPushNotification-macOS.a */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -115,6 +134,23 @@
 			productReference = 134814201AA4EA6300B7C361 /* libRCTPushNotification.a */;
 			productType = "com.apple.product-type.library.static";
 		};
+		8392E8452031AC1500172729 /* RCTPushNotification-macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8392E84A2031AC1500172729 /* Build configuration list for PBXNativeTarget "RCTPushNotification-macOS" */;
+			buildPhases = (
+				8392E8462031AC1500172729 /* Sources */,
+				8392E8482031AC1500172729 /* Frameworks */,
+				8392E8492031AC1500172729 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "RCTPushNotification-macOS";
+			productName = RCTDataManager;
+			productReference = 8392E84D2031AC1500172729 /* libRCTPushNotification-macOS.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -146,6 +182,7 @@
 			projectRoot = "";
 			targets = (
 				58B511DA1A9E6C8500147676 /* RCTPushNotification */,
+				8392E8452031AC1500172729 /* RCTPushNotification-macOS */,
 				3D05745E1DE6004600184BB4 /* RCTPushNotification-tvOS */,
 			);
 		};
@@ -165,6 +202,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				148699CF1ABD045300480536 /* RCTPushNotificationManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8392E8462031AC1500172729 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8392E8472031AC1500172729 /* RCTPushNotificationManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,6 +364,30 @@
 			};
 			name = Release;
 		};
+		8392E84B2031AC1500172729 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_STATIC_ANALYZER_MODE = deep;
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				RUN_CLANG_STATIC_ANALYZER = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		8392E84C2031AC1500172729 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_STATIC_ANALYZER_MODE = deep;
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -345,6 +414,15 @@
 			buildConfigurations = (
 				58B511F01A9E6C8500147676 /* Debug */,
 				58B511F11A9E6C8500147676 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8392E84A2031AC1500172729 /* Build configuration list for PBXNativeTarget "RCTPushNotification-macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8392E84B2031AC1500172729 /* Debug */,
+				8392E84C2031AC1500172729 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

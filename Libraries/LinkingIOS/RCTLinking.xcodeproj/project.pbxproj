@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		148699CF1ABD045300480536 /* RCTLinkingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 148699CE1ABD045300480536 /* RCTLinkingManager.m */; };
 		2D3B5F251D9B0DE600451313 /* RCTLinkingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 148699CE1ABD045300480536 /* RCTLinkingManager.m */; };
+		8392E8502031AC2300172729 /* RCTLinkingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 148699CE1ABD045300480536 /* RCTLinkingManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -16,6 +17,7 @@
 		148699CD1ABD045300480536 /* RCTLinkingManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCTLinkingManager.h; sourceTree = "<group>"; };
 		148699CE1ABD045300480536 /* RCTLinkingManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCTLinkingManager.m; sourceTree = "<group>"; };
 		2D2A28471D9B043800D4039D /* libRCTLinking-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libRCTLinking-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8392E8542031AC2300172729 /* libRCTLinking-macOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libRCTLinking-macOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -34,6 +36,7 @@
 				148699CE1ABD045300480536 /* RCTLinkingManager.m */,
 				134814211AA4EA7D00B7C361 /* Products */,
 				2D2A28471D9B043800D4039D /* libRCTLinking-tvOS.a */,
+				8392E8542031AC2300172729 /* libRCTLinking-macOS.a */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -73,6 +76,21 @@
 			productReference = 134814201AA4EA6300B7C361 /* libRCTLinking.a */;
 			productType = "com.apple.product-type.library.static";
 		};
+		8392E84E2031AC2300172729 /* RCTLinking-macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8392E8512031AC2300172729 /* Build configuration list for PBXNativeTarget "RCTLinking-macOS" */;
+			buildPhases = (
+				8392E84F2031AC2300172729 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "RCTLinking-macOS";
+			productName = RCTDataManager;
+			productReference = 8392E8542031AC2300172729 /* libRCTLinking-macOS.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -104,6 +122,7 @@
 			projectRoot = "";
 			targets = (
 				58B511DA1A9E6C8500147676 /* RCTLinking */,
+				8392E84E2031AC2300172729 /* RCTLinking-macOS */,
 				2D2A28461D9B043800D4039D /* RCTLinking-tvOS */,
 			);
 		};
@@ -123,6 +142,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				148699CF1ABD045300480536 /* RCTLinkingManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8392E84F2031AC2300172729 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8392E8502031AC2300172729 /* RCTLinkingManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +296,26 @@
 			};
 			name = Release;
 		};
+		8392E8522031AC2300172729 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		8392E8532031AC2300172729 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -295,6 +342,15 @@
 			buildConfigurations = (
 				58B511F01A9E6C8500147676 /* Debug */,
 				58B511F11A9E6C8500147676 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8392E8512031AC2300172729 /* Build configuration list for PBXNativeTarget "RCTLinking-macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8392E8522031AC2300172729 /* Debug */,
+				8392E8532031AC2300172729 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

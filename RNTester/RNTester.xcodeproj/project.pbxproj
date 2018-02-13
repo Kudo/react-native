@@ -127,6 +127,10 @@
 		83636F8F1B53F22C009F943E /* RCTUIManagerScenarioTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 83636F8E1B53F22C009F943E /* RCTUIManagerScenarioTests.m */; };
 		8385CEF51B873B5C00C6273E /* RCTImageLoaderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8385CEF41B873B5C00C6273E /* RCTImageLoaderTests.m */; };
 		8385CF041B87479200C6273E /* RCTImageLoaderHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 8385CF031B87479200C6273E /* RCTImageLoaderHelpers.m */; };
+		83D2AA6C2031985500D6B053 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D2AA6B2031985500D6B053 /* AppDelegate.m */; };
+		83D2AA6E2031985500D6B053 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83D2AA6D2031985500D6B053 /* Assets.xcassets */; };
+		83D2AA712031985500D6B053 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83D2AA6F2031985500D6B053 /* MainMenu.xib */; };
+		83D2AA742031985500D6B053 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D2AA732031985500D6B053 /* main.m */; };
 		BC9C03401DC9F1D600B1C635 /* RCTDevMenuTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BC9C033F1DC9F1D600B1C635 /* RCTDevMenuTests.m */; };
 		C654F0B31EB34A73000B7A9A /* RNTesterTestModule.m in Sources */ = {isa = PBXBuildFile; fileRef = C654F0B21EB34A73000B7A9A /* RNTesterTestModule.m */; };
 		C654F17E1EB34D24000B7A9A /* RNTesterTestModule.m in Sources */ = {isa = PBXBuildFile; fileRef = C654F0B21EB34A73000B7A9A /* RNTesterTestModule.m */; };
@@ -546,6 +550,14 @@
 		8385CEF41B873B5C00C6273E /* RCTImageLoaderTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCTImageLoaderTests.m; sourceTree = "<group>"; };
 		8385CF031B87479200C6273E /* RCTImageLoaderHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCTImageLoaderHelpers.m; sourceTree = "<group>"; };
 		8385CF051B8747A000C6273E /* RCTImageLoaderHelpers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCTImageLoaderHelpers.h; sourceTree = "<group>"; };
+		83D2AA682031985500D6B053 /* RNTester-mac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RNTester-mac.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		83D2AA6A2031985500D6B053 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		83D2AA6B2031985500D6B053 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		83D2AA6D2031985500D6B053 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		83D2AA702031985500D6B053 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		83D2AA722031985500D6B053 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		83D2AA732031985500D6B053 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		83D2AA752031985500D6B053 /* RNTester_mac.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RNTester_mac.entitlements; sourceTree = "<group>"; };
 		BC9C033F1DC9F1D600B1C635 /* RCTDevMenuTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCTDevMenuTests.m; sourceTree = "<group>"; };
 		C654F0B21EB34A73000B7A9A /* RNTesterTestModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNTesterTestModule.m; sourceTree = "<group>"; };
 		D85B82911AB6D5CE003F4FE2 /* RCTVibration.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTVibration.xcodeproj; path = ../Libraries/Vibration/RCTVibration.xcodeproj; sourceTree = "<group>"; };
@@ -649,6 +661,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		3D13F83B1D6F6AE000E69E0E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83D2AA652031985500D6B053 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -889,13 +908,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		19BA89021F8439A700741C5A /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		272E6B3A1BEA846C001FCF37 /* NativeExampleViews */ = {
 			isa = PBXGroup;
 			children = (
@@ -988,6 +1000,7 @@
 				3D13F83F1D6F6AE000E69E0E /* RNTesterBundle */,
 				14D6D6EA1B2205C0001FB087 /* OCMock */,
 				2DD323911DA2DD8B000FE1B8 /* RNTester-tvOS */,
+				83D2AA692031985500D6B053 /* RNTester-mac */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2DE7E7D81FB2A4F3009E225D /* Frameworks */,
 			);
@@ -1006,8 +1019,23 @@
 				2DD323901DA2DD8A000FE1B8 /* RNTester-tvOS.app */,
 				2DD323A51DA2DD8B000FE1B8 /* RNTester-tvOSUnitTests.xctest */,
 				2D4624E01DA2EA6900C74D09 /* RNTester-tvOSIntegrationTests.xctest */,
+				83D2AA682031985500D6B053 /* RNTester-mac.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		83D2AA692031985500D6B053 /* RNTester-mac */ = {
+			isa = PBXGroup;
+			children = (
+				83D2AA6A2031985500D6B053 /* AppDelegate.h */,
+				83D2AA6B2031985500D6B053 /* AppDelegate.m */,
+				83D2AA6D2031985500D6B053 /* Assets.xcassets */,
+				83D2AA6F2031985500D6B053 /* MainMenu.xib */,
+				83D2AA722031985500D6B053 /* Info.plist */,
+				83D2AA732031985500D6B053 /* main.m */,
+				83D2AA752031985500D6B053 /* RNTester_mac.entitlements */,
+			);
+			path = "RNTester-mac";
 			sourceTree = "<group>";
 		};
 		D85B82921AB6D5CE003F4FE2 /* Products */ = {
@@ -1145,6 +1173,23 @@
 			productReference = 3D13F83E1D6F6AE000E69E0E /* RNTesterBundle.bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
+		83D2AA672031985500D6B053 /* RNTester-mac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 83D2AAA42031985500D6B053 /* Build configuration list for PBXNativeTarget "RNTester-mac" */;
+			buildPhases = (
+				83D2AA642031985500D6B053 /* Sources */,
+				83D2AA652031985500D6B053 /* Frameworks */,
+				83D2AA662031985500D6B053 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "RNTester-mac";
+			productName = "RNTester-mac";
+			productReference = 83D2AA682031985500D6B053 /* RNTester-mac.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -1172,6 +1217,10 @@
 					};
 					3D13F83D1D6F6AE000E69E0E = {
 						CreatedOnToolsVersion = 7.3.1;
+					};
+					83D2AA672031985500D6B053 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -1261,6 +1310,7 @@
 				2DD3238F1DA2DD8A000FE1B8 /* RNTester-tvOS */,
 				2DD323A41DA2DD8B000FE1B8 /* RNTester-tvOSUnitTests */,
 				2D4624C11DA2EA6900C74D09 /* RNTester-tvOSIntegrationTests */,
+				83D2AA672031985500D6B053 /* RNTester-mac */,
 			);
 		};
 /* End PBXProject section */
@@ -1636,6 +1686,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		83D2AA662031985500D6B053 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83D2AA6E2031985500D6B053 /* Assets.xcassets in Resources */,
+				83D2AA712031985500D6B053 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
@@ -1778,6 +1837,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		83D2AA642031985500D6B053 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83D2AA742031985500D6B053 /* main.m in Sources */,
+				83D2AA6C2031985500D6B053 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -1806,6 +1874,14 @@
 			);
 			name = LaunchScreen.xib;
 			path = RNTester;
+			sourceTree = "<group>";
+		};
+		83D2AA6F2031985500D6B053 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				83D2AA702031985500D6B053 /* Base */,
+			);
+			name = MainMenu.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -2214,6 +2290,65 @@
 			};
 			name = Release;
 		};
+		83D2AA762031985500D6B053 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = "RNTester-mac/RNTester_mac.entitlements";
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "RNTester-mac/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cloudmosa.RNTester-mac";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		83D2AA772031985500D6B053 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = "RNTester-mac/RNTester_mac.entitlements";
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "RNTester-mac/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cloudmosa.RNTester-mac";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -2285,6 +2420,15 @@
 			buildConfigurations = (
 				83CBBA201A601CBA00E9B192 /* Debug */,
 				83CBBA211A601CBA00E9B192 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		83D2AAA42031985500D6B053 /* Build configuration list for PBXNativeTarget "RNTester-mac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83D2AA762031985500D6B053 /* Debug */,
+				83D2AA772031985500D6B053 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
