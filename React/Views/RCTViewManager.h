@@ -7,13 +7,12 @@
  * of patent rights can be found in the PATENTS file in the same directory.
  */
 
-#import <UIKit/UIKit.h>
-
 #import <React/RCTBridgeModule.h>
 #import <React/RCTConvert.h>
 #import <React/RCTDefines.h>
 #import <React/RCTEventDispatcher.h>
 #import <React/RCTLog.h>
+#import <React/RCTXUIKit.h>
 #import <React/UIView+React.h>
 
 @class RCTBridge;

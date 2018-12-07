@@ -41,10 +41,10 @@ CGFloat RCTCoreGraphicsFloatFromYogaFloat(float value)
 
 #pragma mark - Computed Layout-Inferred Metrics
 
-- (UIEdgeInsets)paddingAsInsets
+- (XUIEdgeInsets)paddingAsInsets
 {
   YGNodeRef yogaNode = self.yogaNode;
-  return (UIEdgeInsets){
+  return (XUIEdgeInsets){
     RCTCoreGraphicsFloatFromYogaFloat(YGNodeLayoutGetPadding(yogaNode, YGEdgeTop)),
     RCTCoreGraphicsFloatFromYogaFloat(YGNodeLayoutGetPadding(yogaNode, YGEdgeLeft)),
     RCTCoreGraphicsFloatFromYogaFloat(YGNodeLayoutGetPadding(yogaNode, YGEdgeBottom)),
@@ -52,10 +52,10 @@ CGFloat RCTCoreGraphicsFloatFromYogaFloat(float value)
   };
 }
 
-- (UIEdgeInsets)borderAsInsets
+- (XUIEdgeInsets)borderAsInsets
 {
   YGNodeRef yogaNode = self.yogaNode;
-  return (UIEdgeInsets){
+  return (XUIEdgeInsets){
     RCTCoreGraphicsFloatFromYogaFloat(YGNodeLayoutGetBorder(yogaNode, YGEdgeTop)),
     RCTCoreGraphicsFloatFromYogaFloat(YGNodeLayoutGetBorder(yogaNode, YGEdgeLeft)),
     RCTCoreGraphicsFloatFromYogaFloat(YGNodeLayoutGetBorder(yogaNode, YGEdgeBottom)),
@@ -63,12 +63,12 @@ CGFloat RCTCoreGraphicsFloatFromYogaFloat(float value)
   };
 }
 
-- (UIEdgeInsets)compoundInsets
+- (XUIEdgeInsets)compoundInsets
 {
-  UIEdgeInsets borderAsInsets = self.borderAsInsets;
-  UIEdgeInsets paddingAsInsets = self.paddingAsInsets;
+  XUIEdgeInsets borderAsInsets = self.borderAsInsets;
+  XUIEdgeInsets paddingAsInsets = self.paddingAsInsets;
 
-  return (UIEdgeInsets){
+  return (XUIEdgeInsets){
     borderAsInsets.top + paddingAsInsets.top,
     borderAsInsets.left + paddingAsInsets.left,
     borderAsInsets.bottom + paddingAsInsets.bottom,

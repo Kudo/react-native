@@ -8,7 +8,6 @@
  */
 
 #import <QuartzCore/QuartzCore.h>
-#import <UIKit/UIKit.h>
 
 #import <React/RCTAnimationType.h>
 #import <React/RCTBorderStyle.h>
@@ -16,6 +15,7 @@
 #import <React/RCTLog.h>
 #import <React/RCTPointerEvents.h>
 #import <React/RCTTextDecorationLineType.h>
+#import <React/RCTXUIKit.h>
 #import <yoga/Yoga.h>
 
 /**
@@ -63,17 +63,22 @@ typedef NSURL RCTFileURL;
 + (NSTextAlignment)NSTextAlignment:(id)json;
 + (NSUnderlineStyle)NSUnderlineStyle:(id)json;
 + (NSWritingDirection)NSWritingDirection:(id)json;
+#if TARGET_OS_IOS || TARGET_OS_TV
 + (UITextAutocapitalizationType)UITextAutocapitalizationType:(id)json;
 + (UITextFieldViewMode)UITextFieldViewMode:(id)json;
 + (UIKeyboardType)UIKeyboardType:(id)json;
 + (UIKeyboardAppearance)UIKeyboardAppearance:(id)json;
 + (UIReturnKeyType)UIReturnKeyType:(id)json;
-#if !TARGET_OS_TV
+#if TARGET_OS_IOS
 + (UIDataDetectorTypes)UIDataDetectorTypes:(id)json;
 #endif
+#endif
 
+#if TARGET_OS_IOS || TARGET_OS_TV
 + (UIViewContentMode)UIViewContentMode:(id)json;
-#if !TARGET_OS_TV
+#endif
+
+#if TARGET_OS_IOS
 + (UIBarStyle)UIBarStyle:(id)json;
 #endif
 

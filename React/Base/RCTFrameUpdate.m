@@ -7,10 +7,11 @@
  * of patent rights can be found in the PATENTS file in the same directory.
  */
 
-#import <QuartzCore/CADisplayLink.h>
+
 
 #import "RCTFrameUpdate.h"
 
+#import "RCTDisplayLink.h"
 #import "RCTUtils.h"
 
 @implementation RCTFrameUpdate

@@ -14,6 +14,7 @@
 #import "RCTSurfaceDelegate.h"
 #import "RCTSurfaceView.h"
 #import "RCTUtils.h"
+#import "RCTXUIKit.h"
 
 @interface RCTSurfaceHostingView () <RCTSurfaceDelegate>
 

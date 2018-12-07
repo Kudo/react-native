@@ -25,6 +25,7 @@
 #import "RCTUIManager.h"
 #import "RCTBridge+Private.h"
 #import "RCTUtils.h"
+#import "RCTXUIKit.h"
 
 #if __has_include("RCTDevMenu.h")
 #import "RCTDevMenu.h"
@@ -195,7 +196,8 @@ RCT_EXPORT_MODULE()
 {
   if (!_container) {
     _container = [[UIView alloc] initWithFrame:CGRectMake(10, 25, 180, RCTPerfMonitorBarHeight)];
-    _container.backgroundColor = UIColor.whiteColor;
+    // TODO(kudo): _container.backgroundColor = UIColor.whiteColor;
+    _container.backgroundColor = NSColor.whiteColor;
     _container.layer.borderWidth = 2;
     _container.layer.borderColor = [UIColor lightGrayColor].CGColor;
     [_container addGestureRecognizer:self.gestureRecognizer];

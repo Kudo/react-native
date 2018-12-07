@@ -7,13 +7,13 @@
  * of patent rights can be found in the PATENTS file in the same directory.
  */
 
-#import <UIKit/UIKit.h>
+#import <React/RCTDefines.h>
 
 @interface RCTModalHostViewController : UIViewController
 
 @property (nonatomic, copy) void (^boundsDidChangeBlock)(CGRect newBounds);
 
-#if !TARGET_OS_TV
+#if TARGET_OS_IOS
 @property (nonatomic, assign) UIInterfaceOrientationMask supportedInterfaceOrientations;
 #endif
 

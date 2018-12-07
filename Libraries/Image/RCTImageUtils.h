@@ -8,8 +8,6 @@
  *
  */
 
-#import <UIKit/UIKit.h>
-
 #import <React/RCTDefines.h>
 #import <React/RCTResizeMode.h>
 

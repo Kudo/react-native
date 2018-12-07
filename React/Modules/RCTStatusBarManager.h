@@ -7,9 +7,8 @@
  * of patent rights can be found in the PATENTS file in the same directory.
  */
 
-#import <UIKit/UIKit.h>
-
 #import <React/RCTConvert.h>
+#import <React/RCTDefines.h>
 #import <React/RCTEventEmitter.h>
 
 @interface RCTConvert (UIStatusBar)

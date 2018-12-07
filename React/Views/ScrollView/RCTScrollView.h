@@ -7,12 +7,11 @@
  * of patent rights can be found in the PATENTS file in the same directory.
  */
 
-#import <UIKit/UIScrollView.h>
-
 #import <React/RCTAutoInsetsProtocol.h>
 #import <React/RCTEventDispatcher.h>
 #import <React/RCTScrollableProtocol.h>
 #import <React/RCTView.h>
+#import <React/RCTXUIKit.h>
 
 @protocol UIScrollViewDelegate;
 

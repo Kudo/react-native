@@ -11,6 +11,7 @@
 
 #import "RCTMaskedView.h"
 #import "RCTUIManager.h"
+#import "RCTXUIKit.h"
 
 @implementation RCTMaskedViewManager
 

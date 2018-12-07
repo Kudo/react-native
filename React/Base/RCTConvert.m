@@ -324,6 +324,7 @@ RCT_ENUM_CONVERTER(NSWritingDirection, (@{
   @"rtl": @(NSWritingDirectionRightToLeft),
 }), NSWritingDirectionNatural, integerValue)
 
+#if TARGET_OS_IOS || TARGET_OS_TV
 RCT_ENUM_CONVERTER(UITextAutocapitalizationType, (@{
   @"none": @(UITextAutocapitalizationTypeNone),
   @"words": @(UITextAutocapitalizationTypeWords),
@@ -354,17 +355,6 @@ RCT_ENUM_CONVERTER(UIKeyboardType, (@{
   @"numeric": @(UIKeyboardTypeDecimalPad),
 }), UIKeyboardTypeDefault, integerValue)
 
-#if !TARGET_OS_TV
-RCT_MULTI_ENUM_CONVERTER(UIDataDetectorTypes, (@{
-  @"phoneNumber": @(UIDataDetectorTypePhoneNumber),
-  @"link": @(UIDataDetectorTypeLink),
-  @"address": @(UIDataDetectorTypeAddress),
-  @"calendarEvent": @(UIDataDetectorTypeCalendarEvent),
-  @"none": @(UIDataDetectorTypeNone),
-  @"all": @(UIDataDetectorTypeAll),
-}), UIDataDetectorTypePhoneNumber, unsignedLongLongValue)
-#endif
-
 RCT_ENUM_CONVERTER(UIKeyboardAppearance, (@{
   @"default": @(UIKeyboardAppearanceDefault),
   @"light": @(UIKeyboardAppearanceLight),
@@ -385,6 +375,20 @@ RCT_ENUM_CONVERTER(UIReturnKeyType, (@{
   @"emergency-call": @(UIReturnKeyEmergencyCall),
 }), UIReturnKeyDefault, integerValue)
 
+#if TARGET_OS_IOS
+RCT_MULTI_ENUM_CONVERTER(UIDataDetectorTypes, (@{
+  @"phoneNumber": @(UIDataDetectorTypePhoneNumber),
+  @"link": @(UIDataDetectorTypeLink),
+  @"address": @(UIDataDetectorTypeAddress),
+  @"calendarEvent": @(UIDataDetectorTypeCalendarEvent),
+  @"none": @(UIDataDetectorTypeNone),
+  @"all": @(UIDataDetectorTypeAll),
+}), UIDataDetectorTypePhoneNumber, unsignedLongLongValue)
+
+#endif
+#endif
+
+#if TARGET_OS_IOS || TARGET_OS_TV
 RCT_ENUM_CONVERTER(UIViewContentMode, (@{
   @"scale-to-fill": @(UIViewContentModeScaleToFill),
   @"scale-aspect-fit": @(UIViewContentModeScaleAspectFit),
@@ -404,8 +408,9 @@ RCT_ENUM_CONVERTER(UIViewContentMode, (@{
   @"contain": @(UIViewContentModeScaleAspectFit),
   @"stretch": @(UIViewContentModeScaleToFill),
 }), UIViewContentModeScaleAspectFill, integerValue)
+#endif
 
-#if !TARGET_OS_TV
+#if TARGET_OS_IOS
 RCT_ENUM_CONVERTER(UIBarStyle, (@{
   @"default": @(UIBarStyleDefault),
   @"black": @(UIBarStyleBlack),
@@ -762,11 +767,13 @@ RCT_ENUM_CONVERTER(RCTAnimationType, (@{
     scale = CGImageGetWidth(image.CGImage) / imageSource.size.width;
   }
 
+#if TARGET_OS_IOS || TARGET_OS_TV
   if (scale) {
-    image = [UIImage imageWithCGImage:image.CGImage
+    image = [XUIImage imageWithCGImage:image.CGImage
                                 scale:scale
                           orientation:image.imageOrientation];
   }
+#endif
 
   if (!CGSizeEqualToSize(imageSource.size, CGSizeZero) &&
       !CGSizeEqualToSize(imageSource.size, image.size)) {

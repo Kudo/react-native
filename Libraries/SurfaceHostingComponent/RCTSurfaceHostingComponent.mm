@@ -10,9 +10,8 @@
 #import "RCTSurfaceHostingComponent.h"
 #import "RCTSurfaceHostingComponent+Internal.h"
 
-#import <UIKit/UIKit.h>
-
 #import <ComponentKit/CKComponentSubclass.h>
+#import <React/RCTDefines.h>
 #import <React/RCTSurface.h>
 #import <React/RCTSurfaceView.h>
 

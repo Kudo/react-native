@@ -7,14 +7,18 @@
  * of patent rights can be found in the PATENTS file in the same directory.
  */
 
-#import <UIKit/UIKit.h>
-
 #import <React/RCTComponent.h>
+#import <React/RCTDefines.h>
+#import <React/RCTXUIKit.h>
 #import <yoga/YGEnums.h>
 
 @class RCTShadowView;
 
+#if TARGET_OS_OSX
+@interface NSView (React) <RCTComponent>
+#else
 @interface UIView (React) <RCTComponent>
+#endif
 
 /**
  * RCTComponent interface.

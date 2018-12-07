@@ -9,9 +9,8 @@
 
 #import "RCTImageViewManager.h"
 
-#import <UIKit/UIKit.h>
-
 #import <React/RCTConvert.h>
+#import <React/RCTDefines.h>
 
 #import "RCTImageLoader.h"
 #import "RCTImageShadowView.h"

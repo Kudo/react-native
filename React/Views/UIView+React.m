@@ -15,7 +15,7 @@
 #import "RCTLog.h"
 #import "RCTShadowView.h"
 
-@implementation UIView (React)
+@implementation XUIView (React)
 
 - (NSNumber *)reactTag
 {
@@ -44,24 +44,24 @@
 
 - (NSNumber *)reactTagAtPoint:(CGPoint)point
 {
-  UIView *view = [self hitTest:point withEvent:nil];
+  XUIView *view = [self hitTest:point withEvent:nil];
   while (view && !view.reactTag) {
     view = view.superview;
   }
   return view.reactTag;
 }
 
-- (NSArray<UIView *> *)reactSubviews
+- (NSArray<XUIView *> *)reactSubviews
 {
   return objc_getAssociatedObject(self, _cmd);
 }
 
-- (UIView *)reactSuperview
+- (XUIView *)reactSuperview
 {
   return self.superview;
 }
 
-- (void)insertReactSubview:(UIView *)subview atIndex:(NSInteger)atIndex
+- (void)insertReactSubview:(XUIView *)subview atIndex:(NSInteger)atIndex
 {
   // We access the associated object directly here in case someone overrides
   // the `reactSubviews` getter method and returns an immutable array.
@@ -73,7 +73,7 @@
   [subviews insertObject:subview atIndex:atIndex];
 }
 
-- (void)removeReactSubview:(UIView *)subview
+- (void)removeReactSubview:(XUIView *)subview
 {
   // We access the associated object directly here in case someone overrides
   // the `reactSubviews` getter method and returns an immutable array.
@@ -129,7 +129,7 @@
   self.layer.zPosition = reactZIndex;
 }
 
-- (NSArray<UIView *> *)reactZIndexSortedSubviews
+- (NSArray<XUIView *> *)reactZIndexSortedSubviews
 {
   // Check if sorting is required - in most cases it won't be.
   BOOL sortingRequired = NO;
@@ -183,7 +183,7 @@
   self.bounds = bounds;
 }
 
-- (UIViewController *)reactViewController
+- (XUIViewController *)reactViewController
 {
   id responder = [self nextResponder];
   while (responder) {
@@ -195,7 +195,7 @@
   return nil;
 }
 
-- (void)reactAddControllerToClosestParent:(UIViewController *)controller
+- (void)reactAddControllerToClosestParent:(XUIViewController *)controller
 {
   if (!controller.parentViewController) {
     UIView *parentView = (UIView *)self.reactSuperview;
@@ -244,18 +244,18 @@
 
 #pragma mark - Layout
 
-- (UIEdgeInsets)reactBorderInsets
+- (XUIEdgeInsets)reactBorderInsets
 {
   CGFloat borderWidth = self.layer.borderWidth;
   return UIEdgeInsetsMake(borderWidth, borderWidth, borderWidth, borderWidth);
 }
 
-- (UIEdgeInsets)reactPaddingInsets
+- (XUIEdgeInsets)reactPaddingInsets
 {
   return UIEdgeInsetsZero;
 }
 
-- (UIEdgeInsets)reactCompoundInsets
+- (XUIEdgeInsets)reactCompoundInsets
 {
   UIEdgeInsets borderInsets = self.reactBorderInsets;
   UIEdgeInsets paddingInsets = self.reactPaddingInsets;
@@ -275,7 +275,7 @@
 
 #pragma mark - Accessiblity
 
-- (UIView *)reactAccessibilityElement
+- (XUIView *)reactAccessibilityElement
 {
   return self;
 }

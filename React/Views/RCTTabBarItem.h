@@ -7,10 +7,9 @@
  * of patent rights can be found in the PATENTS file in the same directory.
  */
 
-#import <UIKit/UIKit.h>
-
 #import <React/RCTComponent.h>
 #import <React/RCTConvert.h>
+#import <React/RCTDefines.h>
 
 @interface RCTConvert (UITabBarSystemItem)
 

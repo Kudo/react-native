@@ -9,10 +9,9 @@
 
 #import "RCTWebView.h"
 
-#import <UIKit/UIKit.h>
-
 #import "RCTAutoInsetsProtocol.h"
 #import "RCTConvert.h"
+#import "RCTDefines.h"
 #import "RCTEventDispatcher.h"
 #import "RCTLog.h"
 #import "RCTUtils.h"

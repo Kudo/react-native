@@ -7,13 +7,13 @@
  * of patent rights can be found in the PATENTS file in the same directory.
  */
 
-#import <UIKit/UIKit.h>
-
 #import <React/RCTBridge.h>
 #import <React/RCTBridgeModule.h>
+#import <React/RCTDefines.h>
 #import <React/RCTInvalidating.h>
 #import <React/RCTRootView.h>
 #import <React/RCTViewManager.h>
+#import <React/RCTXUIKit.h>
 
 /**
  * Posted right before re-render happens. This is a chance for views to invalidate their state so

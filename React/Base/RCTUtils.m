@@ -15,11 +15,10 @@
 #import <objc/runtime.h>
 #import <zlib.h>
 
-#import <UIKit/UIKit.h>
-
 #import <CommonCrypto/CommonCrypto.h>
 
 #import "RCTAssert.h"
+#import "RCTDefines.h"
 #import "RCTLog.h"
 
 NSString *const RCTErrorUnspecified = @"EUNSPECIFIED";
@@ -495,12 +494,25 @@ UIViewController *__nullable RCTPresentedViewController(void)
     return nil;
   }
 
-  UIViewController *controller = RCTKeyWindow().rootViewController;
+  UIViewController *controller = nil;
+
+#if TARGET_OS_OSX
+  controller = RCTKeyWindow().contentViewController;
+  
+  UIViewController *presentedController = controller.presentedViewControllers.firstObject;
+  // while (presentedController && ![presentedController isBeingDismissed]) {
+  while (presentedController) {
+    controller = presentedController;
+    presentedController = controller.presentedViewControllers.firstObject;
+  }
+#else
+  controller = RCTKeyWindow().rootViewController;
   UIViewController *presentedController = controller.presentedViewController;
   while (presentedController && ![presentedController isBeingDismissed]) {
     controller = presentedController;
     presentedController = controller.presentedViewController;
   }
+#endif
 
   return controller;
 }

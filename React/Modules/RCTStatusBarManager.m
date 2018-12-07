@@ -13,7 +13,7 @@
 #import "RCTLog.h"
 #import "RCTUtils.h"
 
-#if !TARGET_OS_TV
+#if TARGET_OS_IOS
 @implementation RCTConvert (UIStatusBar)
 
 RCT_ENUM_CONVERTER(UIStatusBarStyle, (@{

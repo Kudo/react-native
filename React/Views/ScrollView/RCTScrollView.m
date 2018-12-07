@@ -9,9 +9,8 @@
 
 #import "RCTScrollView.h"
 
-#import <UIKit/UIKit.h>
-
 #import "RCTConvert.h"
+#import "RCTDefines.h"
 #import "RCTEventDispatcher.h"
 #import "RCTLog.h"
 #import "RCTUIManager.h"
@@ -21,7 +20,7 @@
 #import "UIView+Private.h"
 #import "UIView+React.h"
 
-#if !TARGET_OS_TV
+#if TARGET_OS_IOS
 #import "RCTRefreshControl.h"
 #endif
 
@@ -156,7 +155,7 @@ RCT_NOT_IMPLEMENTED(- (instancetype)init)
 @interface RCTCustomScrollView : UIScrollView<UIGestureRecognizerDelegate>
 
 @property (nonatomic, assign) BOOL centerContent;
-#if !TARGET_OS_TV
+#if TARGET_OS_IOS
 @property (nonatomic, strong) RCTRefreshControl *rctRefreshControl;
 @property (nonatomic, assign) BOOL pinchGestureEnabled;
 #endif
@@ -171,14 +170,16 @@ RCT_NOT_IMPLEMENTED(- (instancetype)init)
   if ((self = [super initWithFrame:frame])) {
     [self.panGestureRecognizer addTarget:self action:@selector(handleCustomPan:)];
 
+#if TARGET_OS_IOS || TARGET_OS_TV
     if ([self respondsToSelector:@selector(setSemanticContentAttribute:)]) {
       // We intentionaly force `UIScrollView`s `semanticContentAttribute` to `LTR` here
       // because this attribute affects a position of vertical scrollbar; we don't want this
       // scrollbar flip because we also flip it with whole `UIScrollView` flip.
       self.semanticContentAttribute = UISemanticContentAttributeForceLeftToRight;
     }
+#endif
 
-    #if !TARGET_OS_TV
+    #if TARGET_OS_IOS
     _pinchGestureEnabled = YES;
     #endif
   }
@@ -330,7 +331,7 @@ RCT_NOT_IMPLEMENTED(- (instancetype)init)
   }
 }
 
-#if !TARGET_OS_TV
+#if TARGET_OS_IOS
 - (void)setRctRefreshControl:(RCTRefreshControl *)refreshControl
 {
   if (_rctRefreshControl) {
@@ -353,7 +354,7 @@ RCT_NOT_IMPLEMENTED(- (instancetype)init)
   // in the setter gets overriden when the view loads.
   self.pinchGestureRecognizer.enabled = _pinchGestureEnabled;
 }
-#endif //TARGET_OS_TV
+#endif //TARGET_OS_IOS
 
 @end
 
@@ -442,7 +443,7 @@ static inline void RCTApplyTransformationAccordingLayoutDirection(UIView *view, 
 - (void)insertReactSubview:(UIView *)view atIndex:(NSInteger)atIndex
 {
   [super insertReactSubview:view atIndex:atIndex];
-#if !TARGET_OS_TV
+#if TARGET_OS_IOS
   if ([view isKindOfClass:[RCTRefreshControl class]]) {
     [_scrollView setRctRefreshControl:(RCTRefreshControl *)view];
   } else
@@ -458,7 +459,7 @@ static inline void RCTApplyTransformationAccordingLayoutDirection(UIView *view, 
 - (void)removeReactSubview:(UIView *)subview
 {
   [super removeReactSubview:subview];
-#if !TARGET_OS_TV
+#if TARGET_OS_IOS
   if ([subview isKindOfClass:[RCTRefreshControl class]]) {
     [_scrollView setRctRefreshControl:nil];
   } else
@@ -509,7 +510,7 @@ static inline void RCTApplyTransformationAccordingLayoutDirection(UIView *view, 
   RCTAssert(self.subviews.count == 1, @"we should only have exactly one subview");
   RCTAssert([self.subviews lastObject] == _scrollView, @"our only subview should be a scrollview");
 
-#if !TARGET_OS_TV
+#if TARGET_OS_IOS
   // Adjust the refresh control frame if the scrollview layout changes.
   RCTRefreshControl *refreshControl = _scrollView.rctRefreshControl;
   if (refreshControl && refreshControl.refreshing) {

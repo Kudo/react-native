@@ -11,9 +11,9 @@
 #import "RCTImagePickerManager.h"
 
 #import <MobileCoreServices/UTCoreTypes.h>
-#import <UIKit/UIKit.h>
 
 #import <React/RCTConvert.h>
+#import <React/RCTDefines.h>
 #import <React/RCTImageStoreManager.h>
 #import <React/RCTRootView.h>
 #import <React/RCTUtils.h>

@@ -7,9 +7,8 @@
  * of patent rights can be found in the PATENTS file in the same directory.
  */
 
-#import <UIKit/UIKit.h>
-
 #import <React/RCTAnimationType.h>
+#import <React/RCTDefines.h>
 
 @interface RCTLayoutAnimation : NSObject
 

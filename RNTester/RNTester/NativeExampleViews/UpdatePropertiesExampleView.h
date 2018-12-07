@@ -8,8 +8,7 @@
  *
  */
 
-#import <UIKit/UIKit.h>
-
+#import <React/RCTDefines.h>
 #import <React/RCTView.h>
 
 @interface UpdatePropertiesExampleView : RCTView

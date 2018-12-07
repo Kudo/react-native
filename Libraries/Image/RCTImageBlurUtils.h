@@ -9,7 +9,6 @@
  */
 
 #import <Accelerate/Accelerate.h>
-#import <UIKit/UIKit.h>
 
 #import <React/RCTDefines.h>
 

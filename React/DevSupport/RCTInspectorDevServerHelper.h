@@ -2,10 +2,10 @@
 
 #import <Foundation/Foundation.h>
 #import <JavaScriptCore/JSBase.h>
-#import <UIKit/UIKit.h>
 
 #import <React/RCTDefines.h>
 #import <React/RCTInspectorPackagerConnection.h>
+#import <React/RCTXUIKit.h>
 
 #if RCT_DEV
 

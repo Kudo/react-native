@@ -7,10 +7,10 @@
  * of patent rights can be found in the PATENTS file in the same directory.
  */
 
-#import <UIKit/UIKit.h>
-
+#import <React/RCTDefines.h>
 #import <React/RCTSurfaceSizeMeasureMode.h>
 #import <React/RCTSurfaceStage.h>
+#import <React/RCTXUIKit.h>
 
 @class RCTBridge;
 @class RCTSurface;

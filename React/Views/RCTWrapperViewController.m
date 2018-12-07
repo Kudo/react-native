@@ -9,11 +9,12 @@
 
 #import "RCTWrapperViewController.h"
 
-#import <UIKit/UIScrollView.h>
-
 #import "RCTEventDispatcher.h"
+#if TARGET_OS_IOS || TAGET_OS_TV
 #import "RCTNavItem.h"
+#endif
 #import "RCTUtils.h"
+#import "RCTXUIKit.h"
 #import "UIView+React.h"
 #import "RCTAutoInsetsProtocol.h"
 

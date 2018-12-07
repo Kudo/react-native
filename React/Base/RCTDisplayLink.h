@@ -9,6 +9,12 @@
 
 #import <Foundation/Foundation.h>
 
+#if TARGET_OS_OSX
+#import <React/RCTXUIKit.h>
+#elif TARGET_OS_IOS || TARGET_OS_TV
+#import <QuartzCore/CADisplayLink.h>
+#endif
+
 @protocol RCTBridgeModule;
 @class RCTModuleData;
 

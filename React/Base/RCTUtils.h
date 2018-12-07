@@ -11,10 +11,10 @@
 
 #import <CoreGraphics/CoreGraphics.h>
 #import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
 
 #import <React/RCTAssert.h>
 #import <React/RCTDefines.h>
+#import <React/RCTXUIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

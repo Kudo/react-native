@@ -9,7 +9,7 @@
 
 #import <CoreGraphics/CoreGraphics.h>
 #import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
+#import <React/RCTDefines.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

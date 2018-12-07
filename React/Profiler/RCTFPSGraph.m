@@ -10,6 +10,9 @@
 #import "RCTFPSGraph.h"
 
 #import "RCTAssert.h"
+#import "RCTXUIKit.h"
+
+#import <QuartzCore/QuartzCore.h>
 
 #if RCT_DEV
 

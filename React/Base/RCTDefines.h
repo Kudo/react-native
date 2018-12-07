@@ -11,6 +11,12 @@
 #  import <Foundation/Foundation.h>
 #endif
 
+#if TARGET_OS_OSX
+#import <AppKit/AppKit.h>
+#elif TARGET_OS_IOS || TARGET_OS_TV
+#import <UIKit/UIKit.h>
+#endif
+
 /**
  * Make global functions usable in C++
  */

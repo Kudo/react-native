@@ -208,6 +208,8 @@ RCT_NOT_IMPLEMENTED(- (instancetype)initWithCoder:(NSCoder *)aDecoder)
 {
   if (_loadingView.superview == self && _contentView.contentHasAppeared) {
     if (_loadingViewFadeDuration > 0) {
+      /*
+       TODO(kudo)
       dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(_loadingViewFadeDelay * NSEC_PER_SEC)),
                      dispatch_get_main_queue(), ^{
 
@@ -220,6 +222,7 @@ RCT_NOT_IMPLEMENTED(- (instancetype)initWithCoder:(NSCoder *)aDecoder)
                                          [self->_loadingView removeFromSuperview];
                                        }];
                      });
+       */
     } else {
       _loadingView.hidden = YES;
       [_loadingView removeFromSuperview];

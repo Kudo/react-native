@@ -184,7 +184,7 @@ static void RCTProcessMetaPropsBorder(const YGValue metaProps[META_PROP_COUNT], 
 }
 
 - (void)applyLayoutWithFrame:(CGRect)frame
-             layoutDirection:(UIUserInterfaceLayoutDirection)layoutDirection
+             layoutDirection:(XUIUserInterfaceLayoutDirection)layoutDirection
       viewsWithUpdatedLayout:(NSMutableSet<RCTShadowView *> *)viewsWithUpdatedLayout
             absolutePosition:(CGPoint)absolutePosition
 {

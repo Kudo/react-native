@@ -9,9 +9,8 @@
 
 #import "RCTImageEditingManager.h"
 
-#import <UIKit/UIKit.h>
-
 #import <React/RCTConvert.h>
+#import <React/RCTDefines.h>
 #import <React/RCTLog.h>
 #import <React/RCTUtils.h>
 

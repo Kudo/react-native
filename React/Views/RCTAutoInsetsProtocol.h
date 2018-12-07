@@ -7,7 +7,8 @@
  * of patent rights can be found in the PATENTS file in the same directory.
  */
 
-#import <UIKit/UIKit.h>
+#import <React/RCTDefines.h>
+#import <React/RCTXUIKit.h>
 
 /**
  * Defines a View that wants to support auto insets adjustment

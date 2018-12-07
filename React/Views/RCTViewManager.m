@@ -28,6 +28,8 @@
 
 @implementation RCTConvert(UIAccessibilityTraits)
 
+/*
+ TODO(kudo)
 RCT_MULTI_ENUM_CONVERTER(UIAccessibilityTraits, (@{
   @"none": @(UIAccessibilityTraitNone),
   @"button": @(UIAccessibilityTraitButton),
@@ -47,6 +49,7 @@ RCT_MULTI_ENUM_CONVERTER(UIAccessibilityTraits, (@{
   @"allowsDirectInteraction": @(UIAccessibilityTraitAllowsDirectInteraction),
   @"pageTurn": @(UIAccessibilityTraitCausesPageTurn),
 }), UIAccessibilityTraitNone, unsignedLongLongValue)
+*/
 
 @end
 
@@ -144,7 +147,7 @@ RCT_CUSTOM_VIEW_PROPERTY(transform, CATransform3D, RCTView)
 {
   view.layer.transform = json ? [RCTConvert CATransform3D:json] : defaultView.layer.transform;
   // TODO: Improve this by enabling edge antialiasing only for transforms with rotation or skewing
-  view.layer.allowsEdgeAntialiasing = !CATransform3DIsIdentity(view.layer.transform);
+  // TODO(kudo): view.layer.allowsEdgeAntialiasing = !CATransform3DIsIdentity(view.layer.transform);
 }
 
 RCT_CUSTOM_VIEW_PROPERTY(pointerEvents, RCTPointerEvents, RCTView)

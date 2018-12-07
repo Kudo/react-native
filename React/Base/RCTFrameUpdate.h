@@ -9,7 +9,7 @@
 
 #import <Foundation/Foundation.h>
 
-@class CADisplayLink;
+#import "RCTDisplayLink.h"
 
 /**
  * Interface containing the information about the last screen refresh.

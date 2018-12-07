@@ -8,9 +8,9 @@
  *
  */
 
-#import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
 
+#import <React/RCTDefines.h>
 #import <React/RCTModuleMethod.h>
 
 @interface RCTMethodArgumentTests : XCTestCase

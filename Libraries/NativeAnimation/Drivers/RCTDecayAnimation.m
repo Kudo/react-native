@@ -9,8 +9,8 @@
 
 #import "RCTDecayAnimation.h"
 
-#import <UIKit/UIKit.h>
 #import <React/RCTConvert.h>
+#import <React/RCTDefines.h>
 
 #import "RCTValueAnimatedNode.h"
 

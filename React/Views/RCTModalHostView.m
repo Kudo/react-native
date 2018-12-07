@@ -9,10 +9,9 @@
 
 #import "RCTModalHostView.h"
 
-#import <UIKit/UIKit.h>
-
 #import "RCTAssert.h"
 #import "RCTBridge.h"
+#import "RCTDefines.h"
 #import "RCTModalHostViewController.h"
 #import "RCTTouchHandler.h"
 #import "RCTUIManager.h"

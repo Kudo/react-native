@@ -7,12 +7,12 @@
  * of patent rights can be found in the PATENTS file in the same directory.
  */
 
-#import <UIKit/UIKit.h>
-
 #import <React/RCTBorderStyle.h>
 #import <React/RCTComponent.h>
+#import <React/RCTDefines.h>
 #import <React/RCTPointerEvents.h>
 #import <React/RCTView.h>
+#import <React/RCTXUIKit.h>
 
 @protocol RCTAutoInsetsProtocol;
 

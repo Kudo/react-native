@@ -8,11 +8,11 @@
  *
  */
 
-#import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
 
 #import <OCMock/OCMock.h>
 
+#import <React/RCTDefines.h>
 #import <React/RCTEventDispatcher.h>
 
 @interface RCTTestEvent : NSObject <RCTEvent>

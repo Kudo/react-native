@@ -3,7 +3,6 @@
 #if RCT_DEV
 
 #import <jschelpers/JSCWrapper.h>
-#import <UIKit/UIKit.h>
 #import <React/RCTLog.h>
 
 #import "RCTDefines.h"
@@ -65,6 +64,8 @@ static void sendEventToAllConnections(NSString *event)
 }
 
 static void displayErrorAlert(UIViewController *view, NSString *message) {
+  /*
+   TODO(kudo)
   UIAlertController *alert =
       [UIAlertController alertControllerWithTitle:nil
                                           message:message
@@ -76,6 +77,7 @@ static void displayErrorAlert(UIViewController *view, NSString *message) {
       ^{
         [alert dismissViewControllerAnimated:YES completion:nil];
       });
+   */
 }
 
 + (void)attachDebugger:(NSString *)owner

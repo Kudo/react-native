@@ -9,8 +9,6 @@
 
 #import "RCTSpringAnimation.h"
 
-#import <UIKit/UIKit.h>
-
 #import <React/RCTConvert.h>
 #import <React/RCTDefines.h>
 

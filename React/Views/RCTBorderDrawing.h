@@ -7,9 +7,9 @@
  * of patent rights can be found in the PATENTS file in the same directory.
  */
 
-#import <UIKit/UIKit.h>
-
 #import <React/RCTBorderStyle.h>
+#import <React/RCTDefines.h>
+#import <React/RCTXUIKit.h>
 
 typedef struct {
   CGFloat topLeft;

@@ -7,8 +7,7 @@
  * of patent rights can be found in the PATENTS file in the same directory.
  */
 
-#import <UIKit/UIKit.h>
-
+#import <React/RCTDefines.h>
 #import <React/RCTInvalidating.h>
 #import <React/RCTRootView.h>
 #import <React/RCTView.h>

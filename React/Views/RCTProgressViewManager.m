@@ -10,6 +10,7 @@
 #import "RCTProgressViewManager.h"
 
 #import "RCTConvert.h"
+#import "RCTXUIKit.h"
 
 @implementation RCTConvert (RCTProgressViewManager)
 

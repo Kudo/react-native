@@ -9,8 +9,7 @@
 
 #import "RCTPlatform.h"
 
-#import <UIKit/UIKit.h>
-
+#import "RCTDefines.h"
 #import "RCTUtils.h"
 #import "RCTVersion.h"
 

@@ -9,8 +9,6 @@
 
 #import "RCTKeyCommands.h"
 
-#import <UIKit/UIKit.h>
-
 #import "RCTDefines.h"
 #import "RCTUtils.h"
 

@@ -1,8 +1,7 @@
 // Copyright 2004-present Facebook. All Rights Reserved.
 
-#import <UIKit/UIKit.h>
-
 #import <React/RCTBridge.h>
+#import <React/RCTDefines.h>
 #import <React/RCTURLRequestHandler.h>
 
 @interface RCTImageStoreManager : NSObject <RCTURLRequestHandler>

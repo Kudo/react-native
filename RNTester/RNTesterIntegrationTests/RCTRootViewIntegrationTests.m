@@ -8,10 +8,10 @@
  *
  */
 
-#import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
 
 #import <RCTTest/RCTTestRunner.h>
+#import <React/RCTDefines.h>
 #import <React/RCTEventDispatcher.h>
 #import <React/RCTRootView.h>
 #import <React/RCTRootViewDelegate.h>

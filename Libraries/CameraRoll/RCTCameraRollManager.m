@@ -11,11 +11,11 @@
 
 #import <CoreLocation/CoreLocation.h>
 #import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
 #import <Photos/Photos.h>
 
 #import <React/RCTBridge.h>
 #import <React/RCTConvert.h>
+#import <React/RCTDefines.h>
 #import <React/RCTImageLoader.h>
 #import <React/RCTLog.h>
 #import <React/RCTUtils.h>

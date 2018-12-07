@@ -9,11 +9,10 @@
 
 #import "RCTSurfaceBackedComponent.h"
 
-#import <UIKit/UIKit.h>
-
 #import <ComponentKit/CKComponentSubclass.h>
 #import <ComponentKit/CKOverlayLayoutComponent.h>
 #import <RCTSurfaceHostingComponent/RCTSurfaceHostingComponent.h>
+#import <React/RCTDefines.h>
 #import <React/RCTSurface.h>
 
 #import "RCTSurfaceBackedComponentState.h"

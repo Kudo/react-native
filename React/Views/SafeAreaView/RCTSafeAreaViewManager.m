@@ -12,6 +12,7 @@
 #import "RCTSafeAreaShadowView.h"
 #import "RCTSafeAreaView.h"
 #import "RCTUIManager.h"
+#import "RCTXUIKit.h"
 
 @implementation RCTSafeAreaViewManager
 
