@@ -48,8 +48,8 @@ class ConcreteShadowNode : public BaseShadowNodeT {
   using ConcreteEventEmitter = EventEmitterT;
   using SharedConcreteEventEmitter = std::shared_ptr<EventEmitterT const>;
   using SharedConcreteShadowNode = std::shared_ptr<ConcreteShadowNode const>;
-  using ConcreteState = ConcreteState<StateDataT>;
-  using ConcreteStateTeller = ConcreteStateTeller<ConcreteState>;
+  using ConcreteStateT = ConcreteState<StateDataT>;
+  using ConcreteStateTellerT = ConcreteStateTeller<ConcreteStateT>;
   using ConcreteStateData = StateDataT;
 
   static ComponentName Name() {
@@ -68,7 +68,7 @@ class ConcreteShadowNode : public BaseShadowNodeT {
     return BaseShadowNodeT::BaseTraits();
   }
 
-  static SharedConcreteProps Props(
+  static SharedConcreteProps PropsFunc(
       RawProps const &rawProps,
       SharedProps const &baseProps = nullptr) {
     return std::make_shared<PropsT const>(
@@ -121,9 +121,9 @@ class ConcreteShadowNode : public BaseShadowNodeT {
   ConcreteStateData const &getStateData() const {
     assert(state_ && "State must not be `nullptr`.");
     assert(
-        std::dynamic_pointer_cast<ConcreteState const>(state_) &&
+        std::dynamic_pointer_cast<ConcreteStateT const>(state_) &&
         "State must be an instance of ConcreteState class.");
-    return static_cast<ConcreteState const *>(state_.get())->getData();
+    return static_cast<ConcreteStateT const *>(state_.get())->getData();
   }
 
   /*
@@ -132,7 +132,7 @@ class ConcreteShadowNode : public BaseShadowNodeT {
    */
   void setStateData(ConcreteStateData &&data) {
     Sealable::ensureUnsealed();
-    state_ = std::make_shared<ConcreteState const>(
+    state_ = std::make_shared<ConcreteStateT const>(
         std::make_shared<ConcreteStateData const>(std::move(data)), *state_);
   }
 };

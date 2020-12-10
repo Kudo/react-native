@@ -40,8 +40,8 @@ class ConcreteComponentDescriptor : public ComponentDescriptor {
   using ConcreteEventEmitter = typename ShadowNodeT::ConcreteEventEmitter;
   using SharedConcreteEventEmitter =
       typename ShadowNodeT::SharedConcreteEventEmitter;
-  using ConcreteState = typename ShadowNodeT::ConcreteState;
-  using ConcreteStateData = typename ShadowNodeT::ConcreteState::Data;
+  using ConcreteState = typename ShadowNodeT::ConcreteStateT;
+  using ConcreteStateData = typename ShadowNodeT::ConcreteStateT::Data;
 
   ConcreteComponentDescriptor(ComponentDescriptorParameters const &parameters)
       : ComponentDescriptor(parameters) {
@@ -119,7 +119,7 @@ class ConcreteComponentDescriptor : public ComponentDescriptor {
 
     rawProps.parse(rawPropsParser_);
 
-    return ShadowNodeT::Props(rawProps, props);
+    return ShadowNodeT::PropsFunc(rawProps, props);
   };
 
   virtual SharedProps interpolateProps(
