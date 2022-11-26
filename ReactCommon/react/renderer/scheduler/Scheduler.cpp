@@ -395,5 +395,9 @@ void Scheduler::uiManagerDidClearJSResponder() {
   }
 }
 
+std::shared_ptr<UIManager> Scheduler::getUIManager() const {
+  return uiManager_;
+}
+
 } // namespace react
 } // namespace facebook

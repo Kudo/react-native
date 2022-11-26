@@ -117,6 +117,9 @@ class Scheduler final : public UIManagerDelegate {
       bool blockNativeResponder) override;
   void uiManagerDidClearJSResponder() override;
 
+#pragma mark - UIManager
+  std::shared_ptr<UIManager> getUIManager() const;
+
  private:
   SchedulerDelegate *delegate_;
   SharedComponentDescriptorRegistry componentDescriptorRegistry_;

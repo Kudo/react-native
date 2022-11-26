@@ -78,6 +78,13 @@ class UIManager final : public ShadowTreeDelegate {
    */
   bool experimentEnableStateUpdateWithAutorepeat{false};
 
+  ShadowNode::Shared findNodeAtPoint(
+      ShadowNode::Shared const &shadowNode,
+      Point point) const;
+
+
+  ShadowTreeRegistry const &getShadowTreeRegistry() const;
+
  private:
   friend class UIManagerBinding;
   friend class Scheduler;
@@ -110,10 +117,6 @@ class UIManager final : public ShadowTreeDelegate {
       const bool blockNativeResponder) const;
 
   void clearJSResponder() const;
-
-  ShadowNode::Shared findNodeAtPoint(
-      ShadowNode::Shared const &shadowNode,
-      Point point) const;
 
   ShadowNode::Shared getNewestCloneOfShadowNode(
       ShadowNode const &shadowNode) const;
@@ -149,8 +152,6 @@ class UIManager final : public ShadowTreeDelegate {
       RawValue const &config,
       jsi::Value const &successCallback,
       jsi::Value const &failureCallback) const;
-
-  ShadowTreeRegistry const &getShadowTreeRegistry() const;
 
   SharedComponentDescriptorRegistry componentDescriptorRegistry_;
   UIManagerDelegate *delegate_;
